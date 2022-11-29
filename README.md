@@ -27,7 +27,7 @@
 # Screenshots
 
 1. Login Screen:
-<img src="[drawing.jpg](https://user-images.githubusercontent.com/10266983/204630755-cfa84335-15d2-4dd4-be6f-e5d36fe41d74.png)" width="180" height="400"/>
+<img src="https://user-images.githubusercontent.com/10266983/204630755-cfa84335-15d2-4dd4-be6f-e5d36fe41d74.png" width="180" height="400"/>
 
 2. Groups List Screen:
 ![Screenshot_Groups_List](https://user-images.githubusercontent.com/10266983/204630809-e4ea2f7b-c50b-4b69-a1bf-ab6defbb2d4e.png =180x400)
