@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/card_margin_horizontal"
+        android:layout_marginVertical="@dimen/card_margin_vertical"
+        android:elevation="@dimen/card_elevation"
+        app:contentPadding="@dimen/card_padding"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/member_profile_picture"
+                android:layout_width="@dimen/group_profile_picture_size"
+                android:layout_height="@dimen/group_profile_picture_size"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CircularImageStyle" />
+
+            <TextView
+                android:id="@+id/member_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/screen_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Dark"
+                app:layout_constraintBottom_toTopOf="@id/member_number"
+                app:layout_constraintEnd_toStartOf="@id/member_remove"
+                app:layout_constraintStart_toEndOf="@id/member_profile_picture"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="User" />
+
+            <TextView
+                android:id="@+id/member_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/screen_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/member_name"
+                app:layout_constraintStart_toStartOf="@id/member_name"
+                app:layout_constraintTop_toBottomOf="@id/member_name"
+                tools:text="9876543210" />
+
+            <ImageView
+                android:id="@+id/member_remove"
+                android:layout_width="@dimen/view_min_touchable_size"
+                android:layout_height="@dimen/view_min_touchable_size"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_delete_forever"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

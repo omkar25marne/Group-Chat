@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.fragment.GroupDetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/group_details_toolbar"
+            style="@style/Theme.Toolbar.WithBackNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:title="@string/group_details_title" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/card_margin_horizontal"
+            android:elevation="@dimen/card_elevation"
+            app:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/group_profile_add_member"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_member_add"
+                    app:fabSize="mini"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/group_profile_image"
+                    android:layout_width="@dimen/user_profile_image_size"
+                    android:layout_height="@dimen/user_profile_image_size"
+                    android:layout_margin="@dimen/screen_margin"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/CircularImageStyle"
+                    tools:src="@mipmap/ic_launcher" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/group_profile_image_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_camera"
+                    app:fabSize="mini"
+                    app:layout_constraintBottom_toBottomOf="@id/group_profile_image"
+                    app:layout_constraintEnd_toEndOf="@id/group_profile_image"
+                    app:layout_constraintStart_toEndOf="@id/group_profile_image"
+                    app:layout_constraintTop_toBottomOf="@id/group_profile_image"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/group_name_til"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/screen_margin"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_details_text"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:paddingHorizontal="8dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium.Dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/group_profile_image_edit" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/group_name_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_edit"
+                    app:fabSize="mini"
+                    app:layout_constraintBottom_toBottomOf="@id/group_name_til"
+                    app:layout_constraintEnd_toEndOf="@id/group_name_til"
+                    app:layout_constraintTop_toBottomOf="@id/group_name_til"
+                    tools:ignore="ContentDescription" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/screen_margin"
+            android:text="@string/group_members"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Dark" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/group_members"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</layout>

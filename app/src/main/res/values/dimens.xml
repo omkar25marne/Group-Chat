@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Commons -->
+    <dimen name="screen_margin">10dp</dimen>
+    <dimen name="view_min_touchable_size">48dp</dimen>
+
+    <!-- Login Screen -->
+    <dimen name="login_icon_size">128dp</dimen>
+
+    <!-- User Profile Screen -->
+    <dimen name="user_profile_image_size">128dp</dimen>
+
+    <!-- Group list screen -->
+    <dimen name="group_profile_picture_size">48dp</dimen>
+
+    <!-- Message list screen -->
+    <dimen name="message_bubble_corner_radius">10dp</dimen>
+    <dimen name="message_group_icon_size">36dp</dimen>
+
+    <!-- Card spacings & elevation -->
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="card_padding">8dp</dimen>
+    <dimen name="card_margin_horizontal">8dp</dimen>
+    <dimen name="card_margin_vertical">1dp</dimen>
+</resources>
